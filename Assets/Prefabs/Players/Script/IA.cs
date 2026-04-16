@@ -21,11 +21,11 @@ public class IA : MonoBehaviour
     private void Movimiento()
     {
         float diferencia = balon.transform.position.y - transform.position.y;
-        if (Mathf.Abs( diferencia) < 0.2f)
+        if (Mathf.Abs( diferencia) > 0.2f)
         {
             if (diferencia > 0)
             {
-                transform.Translate(Vector2.up*velocidad*Time.deltaTime);
+                transform.Translate(Vector2.up * velocidad * Time.deltaTime);
             }
             else{
                 transform.Translate(Vector2.down * velocidad * Time.deltaTime);
