@@ -7,25 +7,7 @@
             "id": "bc6623eb-1f82-4b48-9d39-2fdcbadb1151",
             "actions": [
                 {
-                    "name": "subir",
-                    "type": "Button",
-                    "id": "41eb8a16-fcf6-4602-93d8-8730444bc988",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "bajar",
-                    "type": "Button",
-                    "id": "9dff0d37-598b-49da-9e87-244d5d82e162",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "move",
+                    "name": "Move",
                     "type": "Value",
                     "id": "d5bc9c60-2770-430d-8514-7dde7e742fa1",
                     "expectedControlType": "Vector2",
@@ -37,34 +19,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "219a5644-7c06-4a68-aeef-ea99fffb64ed",
-                    "path": "<Keyboard>/w",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "subir",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "23a676ac-67bd-410d-8dc1-954decfd366d",
-                    "path": "<Keyboard>/s",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "bajar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f63bd4d9-263a-43a3-8ff7-9ba99efcdaeb",
                     "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -75,7 +35,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "move",
+                    "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -86,7 +46,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -97,31 +57,37 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
+                }
+            ]
+        },
+        {
+            "name": "Pelota",
+            "id": "598a7e94-54d1-47a4-ae43-f04da9950ac4",
+            "actions": [
                 {
-                    "name": "left",
-                    "id": "3a42a194-161a-4cc7-9706-ccdd9aa63cec",
-                    "path": "",
+                    "name": "Sacar",
+                    "type": "Button",
+                    "id": "f5248044-4d8f-43d3-a01f-978748f3425a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "31c9fcd4-9966-4d76-be58-9e5fd244ace4",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "move",
+                    "action": "Sacar",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "786153e6-c69e-40d2-a2b1-7e966ce4bfcd",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }

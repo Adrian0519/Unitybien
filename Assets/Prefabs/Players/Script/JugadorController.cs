@@ -1,26 +1,26 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Jugador : MonoBehaviour
+public class JugadorController : MonoBehaviour
 {
-    PlayerInput playerInput;
-    Rigidbody2D rigidbody2D;
-    [SerializeField]float velocidad=1;
-    void Start()
+    [SerializeField]Rigidbody2D rigidbody2D;
+    [SerializeField]float velocidad=1f;
+    private float movimiento = 0f;
+    // Update is called once per frame
+
+
+    void OnMove(InputValue input)
     {
-        playerInput.GetComponent<PlayerInput>();
-        rigidbody2D.GetComponent<Rigidbody2D>();
+       Vector2 moveVector=input.Get<Vector2>();
+       movimiento=moveVector.y;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        OnMove(playerInput.actions["move"]);
-    }
+        Vector2 vel = rigidbody2D.linearVelocity;
+        vel.y = movimiento * velocidad;
+        rigidbody2D.linearVelocity = vel;
 
-    void OnMove(InputAction input)
-    {
-       Vector2 moveVector=input.ReadValue<Vector2>();
-       rigidbody2D.linearVelocity = moveVector * velocidad;
     }
 }
