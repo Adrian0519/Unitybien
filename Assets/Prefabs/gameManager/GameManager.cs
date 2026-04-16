@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int puntosJugador=0;
     public int puntosIa = 0;
     public bool pvp;
+    [Serialize] public TextMeshPro marcadorUi;
 
     public void puntuacion(int identificador)
     {
@@ -44,4 +48,9 @@ public class GameManager : MonoBehaviour
         ia.GetComponent<IA>().reiniciar();
     }
 
+   public void marcadorActualizar()
+    {
+        marcadorUi.text=puntosJugador + " " + puntosIa;
+    }
+    
 }
